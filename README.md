@@ -6,7 +6,13 @@ iles: lbalan.py and statefullb.py
 Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/python2.7/site-packages/ryu/ryu/app' 
 
 Basic Topology Design :
-![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/3e50ce4c-cb99-4acb-891c-a3c14886b428)
+
+
+
+
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/3d2ebb20-47d0-4e39-a15c-b25e5654889d)
+
+
 
 
 <<<<<<<<<<<<<<<< Stateless load balancer >>>>>>>>>>>>>>>>

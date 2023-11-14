@@ -1,5 +1,5 @@
 # Loadbalancer_App
-A round-robin load balancer application deployed on RYU Software-Defined Network controller to perform distributed load-balancing across multi-cluster servers using Python
+A round-robin load balancer application deployed on RYU Software-Defined Network controller to perform distributed load-balancing across multi-vendor servers using Python, mininet 
 iles: lbalan.py and statefullb.py
 
 

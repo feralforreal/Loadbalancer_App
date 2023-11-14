@@ -6,7 +6,7 @@ iles: lbalan.py and statefullb.py
 Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/python2.7/site-packages/ryu/app' 
 
 <<<<<<<<<<<<<<<< Stateless load balancer >>>>>>>>>>>>>>>>
-1) In Mininet, execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=192.168.94.52 --switch ovs,protocols=OpenFlow13'
+1) In Mininet, execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=10.224.78.5 --switch ovs,protocols=OpenFlow13'
 2) Initialize the RYU controller with the llb.py application using the command 'ryu run llb.py'
 3) Using Xming, open terminals for all 7 hosts with the command 'xterm h1 h2 h3 h4 h5 h6 h7'
 4) Execute 'python -m SimpleHTTPserver 80' on terminals of h1, h2 and h3
@@ -16,7 +16,7 @@ Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/pyth
 
 <<<<<<<<<<<<<<<< Stateful load balancer >>>>>>>>>>>>>>>>
 
-8) Execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=192.168.94.52 --switch ovs,protocols=OpenFlow13' in Mininet
+8) Execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=10.224.78.5 --switch ovs,protocols=OpenFlow13' in Mininet
 9) Initialize the RYU controller with the pranit13extra.py application using the command 'ryu run pranit13extra.py'
 10) In this case, any request made by curl or wget command from h4 or h5 would be redirected by the load balancer to h1 web server, requests from h6 would be redirected to h2 web server and requests from h7 would be redirected to h3 web server.
 11) This re-direction to specific seervers by the load balancer is done on basis of source IP of the clients h4, h5, h6 and h7 that it learns

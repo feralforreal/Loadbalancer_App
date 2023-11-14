@@ -5,6 +5,10 @@ iles: lbalan.py and statefullb.py
 
 Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/python2.7/site-packages/ryu/ryu/app' 
 
+Basic Topology Design :
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/3e50ce4c-cb99-4acb-891c-a3c14886b428)
+
+
 <<<<<<<<<<<<<<<< Stateless load balancer >>>>>>>>>>>>>>>>
 1) In Mininet, execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=10.224.78.5 --switch ovs,protocols=OpenFlow13'
 2) Initialize the RYU controller with the llb.py application using the command 'ryu run llb.py'

@@ -24,6 +24,17 @@ Basic Topology Design :
 6) The server then gets back to the host h4/h5/h6/h7 via the load balancer only. Sequence: h1/h2/h3 -> load balancer -> h4/h5/h6/h7
 7) Since, on every new reuqest from one of the four hosts (clients), a new server is selected by the load balancer, like h1, then h2, then h3 and again back to h1 and so on, this is called as a round-robin load balancer.
 
+
+Results : 
+
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/1cb8d387-5b56-40a9-b798-368a7496ccf5)
+
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/d722d0e5-43b7-4bcf-9eb7-9f5c399d4ef6)
+
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/7701b730-94c6-4f53-89e9-54ac0df1b19f)
+
+
+
 <<<<<<<<<<<<<<<< Stateful load balancer >>>>>>>>>>>>>>>>
 
 8) Execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=10.224.78.5 --switch ovs,protocols=OpenFlow13' in Mininet
@@ -31,6 +42,13 @@ Basic Topology Design :
 10) In this case, any request made by curl or wget command from h4 or h5 would be redirected by the load balancer to h1 web server, requests from h6 would be redirected to h2 web server and requests from h7 would be redirected to h3 web server.
 11) This re-direction to specific seervers by the load balancer is done on basis of source IP of the clients h4, h5, h6 and h7 that it learns
 12) All communications to and fro the web servers are via the load balancer
+
+Results:
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/0aa71bfb-cd6a-4973-9175-ec1243a7dabe)
+
+
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/4c41bf86-526b-4242-8a3d-5cb380b69d46)
+
 
 
 <<<<<<<<<<<<<<<<<<<< Testing >>>>>>>>>>>>>>>>>>>>>>>>>>>>

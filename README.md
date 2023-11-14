@@ -15,6 +15,7 @@ Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/pyth
 7) Since, on every new reuqest from one of the four hosts (clients), a new server is selected by the load balancer, like h1, then h2, then h3 and again back to h1 and so on, this is called as a round-robin load balancer.
 
 <<<<<<<<<<<<<<<< Stateful load balancer >>>>>>>>>>>>>>>>
+
 8) Execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=192.168.94.52 --switch ovs,protocols=OpenFlow13' in Mininet
 9) Initialize the RYU controller with the pranit13extra.py application using the command 'ryu run pranit13extra.py'
 10) In this case, any request made by curl or wget command from h4 or h5 would be redirected by the load balancer to h1 web server, requests from h6 would be redirected to h2 web server and requests from h7 would be redirected to h3 web server.
@@ -26,21 +27,10 @@ Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/pyth
 
 We can test this using two applications. a basic web server and an echo server. Below are the Python scripts for both applications along with instructions on how to start and test them.
 
-1. Basic Web Server
-Python Script (simple_web_server.py):
-from http.server import SimpleHTTPRequestHandler, HTTPServer
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/da6f580c-ad03-48ed-b0ae-c0b989056089)
+OR 
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/9e5287ca-3699-4810-aa16-de47f01bd3fc)
 
-class SimpleServer(SimpleHTTPRequestHandler):
-    pass
-
-def run(server_class=HTTPServer, handler_class=SimpleServer, port=8080):
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f"Starting the web server on port {port}...")
-    httpd.serve_forever()
-
-if __name__ == "__main__":
-    run()
 
 How to Test:
 Save the script as simple_web_server.py and run it using the following command:
@@ -49,24 +39,7 @@ python simple_web_server.py
 
 2. Echo Server (using Python's socket module)
 Python Script (echo_server.py):
-import socket
-
-def run_server(host='127.0.0.1', port=8888):
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((host, port))
-        s.listen()
-        print(f"Echo server listening on {host}:{port}...")
-        conn, addr = s.accept()
-        with conn:
-            print(f"Connected by {addr}")
-            while True:
-                data = conn.recv(1024)
-                if not data:
-                    break
-                conn.sendall(data)
-
-if __name__ == "__main__":
-    run_server()
+![image](https://github.com/feralforreal/Loadbalancer_App/assets/132085748/853440b2-2f2f-438f-bc90-941359e69eca)
 
 How to Start:
 Save the script as echo_server.py.

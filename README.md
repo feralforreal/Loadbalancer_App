@@ -3,7 +3,7 @@ A round-robin load balancer application deployed on RYU Software-Defined Network
 iles: lbalan.py and statefullb.py
 
 
-Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/python2.7/site-packages/ryu/app' 
+Note: lbalan.py and statefullb.py are applications present in '~/.local/lib/python2.7/site-packages/ryu/ryu/app' 
 
 <<<<<<<<<<<<<<<< Stateless load balancer >>>>>>>>>>>>>>>>
 1) In Mininet, execute the command 'sudo mn --topo single,7 --mac --controller=remote,ip=10.224.78.5 --switch ovs,protocols=OpenFlow13'
